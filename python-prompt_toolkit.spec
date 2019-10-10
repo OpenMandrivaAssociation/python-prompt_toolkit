@@ -1,13 +1,13 @@
 %global pypi_name prompt_toolkit
 
 Name:           python-%{pypi_name}
-Version:	2.0.9
+Version:	2.0.10
 Release:	1
 Summary:        Library for building powerful interactive command lines in Python
 Group:		Development/Java
 License:        BSD
 URL:            https://github.com/jonathanslenders/python-prompt-toolkit
-Source0:	https://files.pythonhosted.org/packages/94/a0/57dc47115621d9b3fcc589848cdbcbb6c4c130186e8fc4c4704766a7a699/prompt_toolkit-2.0.9.tar.gz
+Source0:	https://files.pythonhosted.org/packages/0c/37/7ad3bf3c6dbe96facf9927ddf066fdafa0f86766237cff32c3c7355d3b7c/prompt_toolkit-2.0.10.tar.gz
 BuildArch:      noarch
 BuildRequires:  python3-devel
 BuildRequires:  python-setuptools
