@@ -1,16 +1,16 @@
 %global pypi_name prompt_toolkit
 
 Name:           python-%{pypi_name}
-Version:	2.0.10
+Version:	3.0.28
 Release:	1
 Summary:        Library for building powerful interactive command lines in Python
 Group:		Development/Java
 License:        BSD
 URL:            https://github.com/jonathanslenders/python-prompt-toolkit
-Source0:	https://files.pythonhosted.org/packages/0c/37/7ad3bf3c6dbe96facf9927ddf066fdafa0f86766237cff32c3c7355d3b7c/prompt_toolkit-2.0.10.tar.gz
+Source0: https://pypi.python.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
-BuildRequires:  python3-devel
-BuildRequires:  python-setuptools
+BuildRequires:  pkgconfig(python)
+BuildRequires:  python3dist(setuptools)
 
 %description
 prompt_toolkit is a library for building powerful interactive command lines
@@ -49,12 +49,12 @@ python2 setup.py install --root=%buildroot
 %files -n python2-%{pypi_name} 
 %doc README.rst AUTHORS.rst CHANGELOG
 %{python2_sitelib}/%{pypi_name}
-%{python2_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
+%{python2_sitelib}/%{pypi_name}-%{version}-py*.*.egg-info
 
 %files
 %doc README.rst AUTHORS.rst CHANGELOG
-%{python3_sitelib}/%{pypi_name}
-%{python3_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
+%{python_sitelib}/%{pypi_name}
+%{python_sitelib}/%{pypi_name}-%{version}-py*.*.egg-info
 
 %changelog
 * Mon Dec 19 2016 Miro Hrončok <mhroncok@redhat.com> - 1.0.9-2
