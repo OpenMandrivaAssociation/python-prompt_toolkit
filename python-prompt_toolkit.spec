@@ -1,7 +1,7 @@
 %global pypi_name prompt_toolkit
 
 Name:           python-%{pypi_name}
-Version:	3.0.47
+Version:	3.0.48
 Release:	1
 Summary:        Library for building powerful interactive command lines in Python
 Group:		Development/Java
