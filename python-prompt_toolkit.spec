@@ -2,7 +2,7 @@
 
 Name:           python-%{pypi_name}
 Version:	3.0.48
-Release:	1
+Release:	2
 Summary:        Library for building powerful interactive command lines in Python
 Group:		Development/Java
 License:        BSD
