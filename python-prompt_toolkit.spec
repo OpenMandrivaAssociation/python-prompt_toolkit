@@ -21,4 +21,4 @@ and terminal applications in Python.
 %files
 %doc README.rst AUTHORS.rst CHANGELOG
 %{python_sitelib}/%{pypi_name}
-%{python_sitelib}/%{pypi_name}-%{version}-py*.*.egg-info
+%{python_sitelib}/%{pypi_name}-%{version}.dist-info
