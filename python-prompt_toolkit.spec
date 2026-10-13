@@ -1,7 +1,7 @@
 %global pypi_name prompt_toolkit
 
 Name:           python-%{pypi_name}
-Version:	3.0.52
+Version:	3.0.53
 Release:	1
 Summary:        Library for building powerful interactive command lines in Python
 Group:		Development/Python
@@ -10,9 +10,18 @@ URL:            https://github.com/jonathanslenders/python-prompt-toolkit
 Source0: https://pypi.python.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:	python
+BuildRequires:  python%{pyver}dist(pip)
 BuildRequires:  python%{pyver}dist(setuptools)
+BuildRequires:  python%{pyver}dist(wheel)
 
 Obsoletes:	python2-%{pypi_name} < %{EVRD}
+
+%prep -a
+cat >> pyproject.toml << 'EOF'
+
+[tool.setuptools.packages.find]
+where = ["src"]
+EOF
 
 %description
 prompt_toolkit is a library for building powerful interactive command lines
